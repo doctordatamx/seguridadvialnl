@@ -1,22 +1,33 @@
 {
   "mode": "public_aggregate",
   "release_approved": true,
-  "owner_authorization": "Solicitud explícita de publicar en doctordatamx/seguridadvialnl, 2026-11-17.",
-  "scope": "Estadística derivada, sin redistribución de originales, microdatos ni conteos de víctimas.",
+  "owner_authorization": "Solicitud de publicar el observatorio y posterior ampliación de inteligencia territorial/epidemiológica, 2026-11-17.",
+  "scope": "Estadística derivada: frecuencias mensuales; inteligencia en celdas amplias y epidemiología anual con supresión previa a derivados. Sin microdatos, originales ni calles libres.",
   "spatial_resolution": 7,
   "minimum_spatial_count": 20,
   "excluded": [
     "raw_data",
     "microdata",
-    "victim_counts",
+    "small_clinical_counts_and_derivatives",
     "source_folios",
     "contact_details",
     "free_text_streets",
-    "local_research_results"
+    "individual_crash_coordinates",
+    "private_research_results"
   ],
   "sha256": {
-    "observatory.json": "14432a650c6ba9aa90e6c5b9470984ba30190a1efcae3e1e6daea06480ce94bf",
-    "report.html": "e170d1d69b43bbcef65cac06420e949288a41e95b559d355e29e4e88cb49948b",
-    "spatial.json": "079fbfe45b5d365e566b117e9135f4617a4844e9ad835e124c3381fd3e61f9e0"
-  }
+    "observatory.json": "194f12dae2172fb3d8a5c57c619eac8e740cf8abe9304a3ae5366b94a517e3d8",
+    "spatial.json": "079fbfe45b5d365e566b117e9135f4617a4844e9ad835e124c3381fd3e61f9e0",
+    "report.html": "5e4e151a9f90f30ba854ea4bdf882ed338c272e75709990c601af7aa66655be3",
+    "intelligence.json": "e9970e5f106a23bdb2faf4ea1721f791045ff2011bec5d5fd60d7f197e968457",
+    "temporal.json": "f256d4d53177b78ad4889f187831f07d52d83d3032df8750f84faf9b3adfdf39",
+    "methods.json": "a4242fbfed69c72b4f83d6a33bce53dd58730e7ed36c8a3a041dc4f464dfeee3",
+    "boundaries.json": "fad97248f6cb1c84b4839d00ae82d5f87cb78092751fa755cc120593fe67a801",
+    "institutions.json": "e085d637ec7bd237fc1a8947ea4c4f600152745c401e66570985cc3f2764b270",
+    "atlas-metadata.json": "cc6b3491a0146781533731b055fbc9652d582bde4fdf6ed73ef866bdc7182a1e",
+    "mobility.json": "87c0d5f80c0fcc05f87ebeadac57278cf68aaaeefa661fecf997b9232aaecbff",
+    "spatial-quality.json": "38482f9b0526290b2ff6c965d0fae5072fd3b7909e91ae8cd50700dd9f10f1e9"
+  },
+  "intelligence_version": "0.2",
+  "privacy_rule": "Mensual municipal mantiene desenlaces ocultos. Nuevos desenlaces sólo anuales/celdas R7 de >=20 registros en ambos años de referencia; 1–4 y supresión complementaria se aplican antes de IPIV/ratios."
 }

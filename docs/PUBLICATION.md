@@ -1,27 +1,29 @@
 # Edición pública de OSV-NL
 
-Autorización del propietario: solicitud explícita de publicar en doctordatamx/seguridadvialnl, 17 de noviembre de 2026.
+El propietario solicitó publicar y continuar la plataforma en doctordatamx/seguridadvialnl. Publicación estática en GitHub Pages.
 
-## Alcance
+Sólo código, cartografía contextual con atribución y estadística derivada agregada. No se redistribuyen originales RATIV, microdatos, folios, calles libres, narraciones, contactos, pólizas, placas ni resultados individuales. MIT cubre código; fuentes bajo sus propias condiciones (DATA_LICENSES.md).
 
-Sólo código y estadística derivada agregada. No se redistribuyen las bases originales ni se publica la edición local completa. Atribución OCISEVI/RATIV, fuentes, método, corte y limitaciones visibles. La MIT cubre código, no datos de terceros.
+Frecuencias mensuales con umbral cinco y protección complementaria. H3 resolución siete con umbral veinte. Desenlaces anuales municipales y de celdas de referencia protegen positivos entre uno y cuatro antes de normalizar o derivar índices/ratios. Se retiran márgenes municipales de variables espaciales ocultas. La protección no demuestra anonimización frente a todo dato externo. Nulo y supresión nunca se convierten en cero.
 
-- Frecuencias mensuales por municipio; celdas de menos de cinco registros suprimidas.
-- Conteos de lesionadas/fallecidas excluidos de la edición pública, incluso cuando están disponibles localmente.
-- Perfiles anuales con celdas mensuales pequeñas excluidos para evitar recuperación desde esos márgenes.
-- Calles libres, folios repetidos, narraciones, contactos, pólizas, placas y microdatos no publicados.
-- Presencia de peatón lesionado/fallecido excluida de los desgloses públicos de usuarios vulnerables.
-- H3 resolución 7, mínimo veinte registros; nunca coordenadas de eventos individuales ni víctimas por celda. La geografía es provisional: datum y pertenencia municipal sin comprobar.
+release/manifest.json enumera once recursos y hashes. check_public.py comprueba esquema, umbrales, derivados, exclusiones y atribución. stage_public.mjs copia sólo esa lista a web/public/data. GitHub Actions no descarga originales ni ejecuta el análisis real; verifica la edición y compila con base /seguridadvialnl/.
 
-Las pautas de uso del portal piden atribución y conservación de integridad. No se infiere una licencia propia sobre los archivos de terceros. Este repositorio presenta cálculos derivados y enlaza la fuente original.
+## Reproducir localmente
 
-## Construcción
+Python 3.14 con requirements.lock.txt; Node 24 y npm ci en web. Desde la raíz:
 
-1. python scripts/check_public.py
-2. node scripts/stage_public.mjs
-3. npm ci en web
-4. npm run build -- --mode pages en web
+    powershell -ExecutionPolicy Bypass -File scripts/update_intelligence.ps1 -Records C:\ruta\privada\crashes.parquet
+    python -m pytest -q
+    node --test tests/frontend.test.mjs
 
-GitHub Actions usa exclusivamente release/, verifica hashes y publica web/dist. Los originales se excluyen mediante .gitignore y el paquete se revisa antes del commit. Las descargas y los pipelines locales no forman parte del workflow de despliegue.
+El Parquet debe cumplir el contrato RATIV y permanecer privado. El script conserva caché, rechaza respuestas incompletas, genera agregados, actualiza hashes, verifica y compila. Revisar el diff y protecciones antes de publicar. El piloto mensual se prepara separadamente con prepare_public.py; después hay que regenerar el manifiesto completo.
 
-No cambiar mode ni release_approved en archivos de datos locales para subirlos directamente. Para una nueva edición pública utilizar prepare_public.py, revisar los agregados, verificar exclusiones y hashes, probar el build y publicar el diff resultante.
+## Verificar edición preparada
+
+    python scripts/check_public.py
+    node scripts/stage_public.mjs
+    cd web
+    npm ci
+    npm run build -- --mode pages
+
+No cambiar banderas de autorización de datos locales para subirlos directamente. Métodos y restricciones: INTELLIGENCE_METHODS.md. Métodos sin condiciones suficientes permanecen no calculables.

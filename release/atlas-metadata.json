@@ -1,0 +1,56 @@
+{
+  "prepared_at": "2026-11-17T18:54:00.583243+00:00",
+  "sources": [
+    {
+      "name": "INEGI · Marco Geoestadístico diciembre 2025 y Censo 2020",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/19",
+      "license": "Términos de libre uso INEGI",
+      "terms": "https://www.inegi.org.mx/inegi/terminos.html",
+      "original_sha256": "49de26e98b9d224506f0797f2105ff54715026861ba716a0ef3df45e8c287701",
+      "processing": "Simplificación de geometrías para visualización; análisis de OSV-NL, no de INEGI."
+    },
+    {
+      "name": "© OpenStreetMap contributors",
+      "url": "https://overpass-api.de/api/interpreter",
+      "license": "ODbL 1.0",
+      "terms": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "count": 1565,
+      "status": "available"
+    }
+  ],
+  "layers": [
+    {
+      "id": "boundaries",
+      "label": "Límites municipales",
+      "status": "available",
+      "records": 51
+    },
+    {
+      "id": "institutions",
+      "label": "Hospitales y centros educativos OSM",
+      "status": "available",
+      "records": 1565
+    },
+    {
+      "id": "roads",
+      "label": "Red vial",
+      "status": "available",
+      "reason": "Inventario OSM parcial; no se interpreta ausencia como falta de infraestructura.",
+      "records": 7810
+    },
+    {
+      "id": "cycling",
+      "label": "Infraestructura ciclista",
+      "status": "available",
+      "reason": "Inventario OSM parcial; no se interpreta ausencia como falta de infraestructura.",
+      "records": 145
+    },
+    {
+      "id": "transit",
+      "label": "Paradas de transporte",
+      "status": "available",
+      "reason": "Inventario OSM parcial; no se interpreta ausencia como falta de infraestructura.",
+      "records": 691
+    }
+  ]
+}

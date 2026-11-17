@@ -10,11 +10,11 @@ Repositorio: https://github.com/doctordatamx/seguridadvialnl
 
 Sitio publicado: https://doctordatamx.github.io/seguridadvialnl/
 
-Esta edición presenta estadística derivada de RATIV/OCISEVI, con atribución y límites visibles. Los originales, microdatos, conteos de víctimas, calles en texto libre y resultados locales detallados no se incluyen. No se asigna una licencia propia a las bases de terceros. La licencia MIT se aplica al código.
+Esta edición presenta estadística derivada de RATIV/OCISEVI con atribución y límites visibles. Incluye IPIV experimental, rankings, fichas compartibles e imprimibles, radar condicionado por cobertura, atlas INEGI/OSM con proximidad agregada, calendario y epidemiología anual protegida. Los originales, microdatos, calles libres y resultados locales detallados no se incluyen. Los conteos sensibles pequeños y sus derivados se protegen antes de calcular índices. MIT cubre código; véase DATA_LICENSES.md.
 
 Los archivos públicos revisados están en `release/`, con hashes y alcance en `release/manifest.json`. El mapa público usa H3 resolución 7 y mínimo veinte registros por celda. La presencia de registros en un periodo no garantiza exhaustividad. El corte de 2026 es junio; no debe compararse sin ajustes con años completos.
 
-El workflow Pages verifica los hashes y las exclusiones, copia únicamente la edición `release` a los recursos web y compila con base `/seguridadvialnl/`. No descarga ni publica automáticamente bases originales. Una actualización de fuentes exige ejecutar el pipeline local, preparar una nueva edición con `scripts/prepare_public.py`, verificarla y revisar el diff de `release/`.
+El workflow Pages verifica hashes y exclusiones, copia únicamente `release` y compila con base `/seguridadvialnl/`. No descarga ni publica originales. Reproducción: [PUBLICATION.md](docs/PUBLICATION.md). Cálculos: [INTELLIGENCE_METHODS.md](docs/INTELLIGENCE_METHODS.md). Entregas y pendientes: [PROJECT_STATUS.md](PROJECT_STATUS.md). El IPIV no mide riesgo absoluto; el radar no es vigilancia en tiempo real. Datum fuente no declarado: métodos espaciales exploratorios.
 
 ## Ver la edición pública localmente
 

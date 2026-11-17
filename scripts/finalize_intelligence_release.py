@@ -1,0 +1,22 @@
+"""Sella una edición pública extendida, conservando las restricciones del piloto mensual."""
+import hashlib,json
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+RELEASE=ROOT/'release'
+files=['observatory.json','spatial.json','report.html','intelligence.json','temporal.json','methods.json','boundaries.json','institutions.json','atlas-metadata.json','mobility.json','spatial-quality.json']
+for name in files:
+    if not (RELEASE/name).exists():raise SystemExit('Falta recurso materializado: '+name)
+data=json.loads((RELEASE/'observatory.json').read_text(encoding='utf-8'))
+data['publication_scope']='Estadística derivada: frecuencias mensuales; inteligencia en celdas amplias y epidemiología anual con supresión previa a derivados. Sin microdatos, originales ni calles libres.'
+data['limitations']=[x.replace('Edición pública de estadística derivada: originales, microdatos, conteos de víctimas y calles en texto libre excluidos.', 'Los originales, microdatos y calles libres se excluyen; desenlaces anuales y en celdas amplias se protegen antes de índices o cocientes.') for x in data['limitations']]
+(RELEASE/'observatory.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
+intelligence=json.loads((RELEASE/'intelligence.json').read_text(encoding='utf-8'))
+text='<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OSV-NL · Inteligencia territorial 0.2</title><style>body{font:16px/1.8 system-ui;max-width:1000px;margin:auto;padding:30px;color:#18334d}li{margin:12px 0}a{color:#075985}</style><h1>OSV-NL · Inteligencia territorial y epidemiología</h1><p>Doctor Data · Observatorio ciudadano independiente, sin carácter oficial.</p><p>Corte: '+intelligence['cutoff']+'. Referencia: '+intelligence['reference']['id']+'.</p><h2>Alcance</h2><p>La edición contiene '+str(len(intelligence['zones']))+' celdas de referencia, '+str(intelligence['reference']['complete_cases'])+' con cinco dimensiones publicables para IPIV. Incluye fichas por URL, rankings, sensibilidad, radar condicionado por cobertura, matriz temporal, calendario y epidemiología agregada.</p><ul>'+''.join('<li>'+item+'</li>' for item in intelligence['limitations'])+'</ul><p>Los nulos no se rellenan con cero. La supresión de desenlaces pequeños precede a índices, cocientes e intervalos. Sólo 2020 usa denominador poblacional Censo 2020; no se extrapola. Las alertas estadísticas son condicionales y exploratorias, no vigilancia validada en tiempo real.</p><h2>Fuentes</h2><p>OCISEVI/RATIV: registros administrativos. INEGI: Marco Geoestadístico diciembre 2025 y población Censo 2020. OpenStreetMap: instituciones y movilidad bajo ODbL 1.0. Los originales y microdatos no se redistribuyen.</p><p>© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a>. <a href="https://www.inegi.org.mx/servicios/catalogounico/">Servicio INEGI</a>.</p><h2>Método y reproducibilidad</h2><p><a href="https://github.com/doctordatamx/seguridadvialnl/blob/main/docs/INTELLIGENCE_METHODS.md">Protocolo, limitaciones y referencias técnicas</a>. El código y los hashes están en el repositorio público; los análisis son de OSV-NL/Doctor Data, no de las fuentes.</p></html>'
+(RELEASE/'report.html').write_text(text,encoding='utf-8')
+manifest=json.loads((RELEASE/'manifest.json').read_text(encoding='utf-8'))
+manifest.update({'intelligence_version':'0.2','scope':data['publication_scope'],'owner_authorization':'Solicitud de publicar el observatorio y posterior ampliación de inteligencia territorial/epidemiológica, 2026-11-17.',
+                 'excluded':['raw_data','microdata','small_clinical_counts_and_derivatives','source_folios','contact_details','free_text_streets','individual_crash_coordinates','private_research_results'],
+                 'privacy_rule':'Mensual municipal mantiene desenlaces ocultos. Nuevos desenlaces sólo anuales/celdas R7 de >=20 registros en ambos años de referencia; 1–4 y supresión complementaria se aplican antes de IPIV/ratios.'})
+manifest['sha256']={name:hashlib.sha256((RELEASE/name).read_bytes()).hexdigest() for name in files}
+(RELEASE/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
+print('Edición de inteligencia sellada: '+str(len(files))+' archivos agregados.')
