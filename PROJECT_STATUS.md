@@ -4,7 +4,7 @@
 
 Solicitud explícita: publicar en doctordatamx/seguridadvialnl. Repositorio existente vacío, cuenta autenticada comprobada y permiso administrativo disponible. Se preparó una edición pública independiente en release/ y un workflow GitHub Pages. Excluye originales, microdatos, conteos de víctimas, calles libres y resultados locales de investigación. H3 público: resolución 7, mínimo veinte registros. Se omiten dos perfiles anuales que permitirían recuperar celdas mensuales pequeñas; quedan 86 perfiles y 986 celdas mensuales. Las secciones siguientes documentan la edición de investigación local y no describen el alcance público.
 
-Estado de despliegue: preparado para validación final y publicación; se actualizará tras verificar GitHub Pages.
+Estado de despliegue: **publicado y verificado** en https://doctordatamx.github.io/seguridadvialnl/. El workflow de publicación 44129170121 y CI 44129169946 finalizaron correctamente sobre el commit 0e66a9b5d373b1784c6e62d24e6313d1d0365ddf. Verificación de navegador: datos cargados, edición pública identificada, mapa H3 resolución 7 visible con umbral veinte y sin errores de consola. El sitio ya no depende del servidor local.
 
 Actualizado: 17 de noviembre de 2026. Versión 0.2.0. **Vista local con datos reales; no desplegada públicamente.**
 

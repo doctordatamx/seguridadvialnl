@@ -8,7 +8,7 @@ Iniciativa ciudadana independiente. No es una entidad gubernamental ni una plata
 
 Repositorio: https://github.com/doctordatamx/seguridadvialnl
 
-Dirección prevista: https://doctordatamx.github.io/seguridadvialnl/
+Sitio publicado: https://doctordatamx.github.io/seguridadvialnl/
 
 Esta edición presenta estadística derivada de RATIV/OCISEVI, con atribución y límites visibles. Los originales, microdatos, conteos de víctimas, calles en texto libre y resultados locales detallados no se incluyen. No se asigna una licencia propia a las bases de terceros. La licencia MIT se aplica al código.
 
