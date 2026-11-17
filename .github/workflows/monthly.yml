@@ -1,0 +1,13 @@
+name: Revisión mensual sin descarga automática
+on:
+  schedule:
+    - cron: '0 14 2 * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo 'Fuente inicial sin descarga automatizable verificada. Descargar manualmente, revisar licencia y privacidad y ejecutar scripts/update.ps1. Este flujo no publica ni inventa actualizaciones.' >> "$GITHUB_STEP_SUMMARY"

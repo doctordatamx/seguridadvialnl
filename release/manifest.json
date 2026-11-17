@@ -1,0 +1,22 @@
+{
+  "mode": "public_aggregate",
+  "release_approved": true,
+  "owner_authorization": "Solicitud explícita de publicar en doctordatamx/seguridadvialnl, 2026-11-17.",
+  "scope": "Estadística derivada, sin redistribución de originales, microdatos ni conteos de víctimas.",
+  "spatial_resolution": 7,
+  "minimum_spatial_count": 20,
+  "excluded": [
+    "raw_data",
+    "microdata",
+    "victim_counts",
+    "source_folios",
+    "contact_details",
+    "free_text_streets",
+    "local_research_results"
+  ],
+  "sha256": {
+    "observatory.json": "14432a650c6ba9aa90e6c5b9470984ba30190a1efcae3e1e6daea06480ce94bf",
+    "report.html": "e170d1d69b43bbcef65cac06420e949288a41e95b559d355e29e4e88cb49948b",
+    "spatial.json": "079fbfe45b5d365e566b117e9135f4617a4844e9ad835e124c3381fd3e61f9e0"
+  }
+}

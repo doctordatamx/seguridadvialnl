@@ -1,0 +1,2 @@
+export type Breakdown = {name:string;value:number|null;suppressed:boolean};
+export type Profile = {municipality:string;year:string;records:number;date_min:string;date_max:string;months_observed:string[];hours_known:number;coordinates_plausible:number;injured_known:number;deaths_known:number;repeated_folio_records:number;weekday:Breakdown[];report_hour:Breakdown[];crash_types:Breakdown[];primary_vehicle:Breakdown[];vulnerable_presence:Breakdown[];streets:{name:string;value:number}[]};

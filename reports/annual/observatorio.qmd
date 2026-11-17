@@ -1,0 +1,42 @@
+---
+title: "OSV-NL | Informe reproducible"
+lang: es
+format:
+  html:
+    toc: true
+    embed-resources: true
+  pdf:
+    toc: true
+jupyter: python3
+---
+
+## Alcance
+
+Observatorio ciudadano independiente. Este documento utiliza exclusivamente las salidas públicas agregadas del pipeline. No representa una estadística oficial ni cobertura estatal completa.
+
+```{python}
+from pathlib import Path
+import json
+import pandas as pd
+root = next(p for p in [Path.cwd(), *Path.cwd().parents] if (p/'config/sources.json').exists())
+data = json.loads((root/'web/public/data/observatory.json').read_text(encoding='utf-8'))
+print('Corte de los datos:', data['data_through'] or 'Sin información')
+print('Ejecución del pipeline:', data['generated_at'])
+if data['rows']:
+    display(pd.DataFrame(data['rows']))
+else:
+    print('No hay datos verificados. No se calculan indicadores.')
+```
+
+## Fuentes y limitaciones
+
+```{python}
+for source in data['sources']:
+    print(source)
+for limitation in data['limitations']:
+    print('•', limitation)
+```
+
+## Metodología
+
+Una fila por siniestro validado antes de la agregación. Se preservan los nulos; no se completan periodos sin información con ceros. Se suprimen celdas pequeñas. Los desenlaces no se equiparan a mortalidad a 30 días. Las concentraciones espaciales no miden riesgo sin exposición. Véase METHODOLOGY.md del proyecto.

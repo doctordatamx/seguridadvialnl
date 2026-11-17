@@ -1,0 +1,276 @@
+{
+  "sources": [
+    {
+      "id": "ocisevi/rativ_abierto_2019.csv.gz",
+      "adapter": "rativ_v1",
+      "partition_year": 2019,
+      "observation_unit": "crash_record",
+      "source_url": "https://ocisevi.org.mx/ocisevi-nl/rativ_abierto_2019.csv.gz",
+      "license": "Pautas OCISEVI: citar fuente y mantener integridad. Licencia específica de redistribución sin confirmar.",
+      "redistribution_approved": false,
+      "local_preview_approved": true,
+      "privacy_reviewed": true,
+      "privacy_review_scope": "Sólo lista blanca canónica y agregados locales. Se excluyen teléfonos, placas, pólizas, folios públicos y narraciones. No permite despliegue público.",
+      "columns": {
+        "event_id": "ENCUESTA",
+        "municipality": "MUNICIPIO",
+        "day": "Día",
+        "month": "Mes",
+        "year": "Año",
+        "hour": "Hora de reporte",
+        "injured": "Total de lesionados",
+        "deaths": "Total de fallecidos",
+        "street": "CALLE",
+        "crash_type": "Tipo de Hecho de Tránsito",
+        "vehicle": "VEHICULO CODIFICADO",
+        "reference": "Referencia"
+      },
+      "derived_fields": [
+        "date",
+        "latitude",
+        "longitude",
+        "vulnerable_user"
+      ]
+    },
+    {
+      "id": "ocisevi/rativ_abierto_2020.csv.gz",
+      "adapter": "rativ_v1",
+      "partition_year": 2020,
+      "observation_unit": "crash_record",
+      "source_url": "https://ocisevi.org.mx/ocisevi-nl/rativ_abierto_2020.csv.gz",
+      "license": "Pautas OCISEVI: citar fuente y mantener integridad. Licencia específica de redistribución sin confirmar.",
+      "redistribution_approved": false,
+      "local_preview_approved": true,
+      "privacy_reviewed": true,
+      "privacy_review_scope": "Sólo lista blanca canónica y agregados locales. Se excluyen teléfonos, placas, pólizas, folios públicos y narraciones. No permite despliegue público.",
+      "columns": {
+        "event_id": "ENCUESTA",
+        "municipality": "MUNICIPIO",
+        "day": "Día",
+        "month": "Mes",
+        "year": "Año",
+        "hour": "Hora de reporte",
+        "injured": "Total de lesionados",
+        "deaths": "Total de fallecidos",
+        "street": "Calle",
+        "crash_type": "Tipo de Hecho de Tránsito",
+        "vehicle": "VEHICULO CODIFICADO",
+        "reference": "Referencia"
+      },
+      "derived_fields": [
+        "date",
+        "latitude",
+        "longitude",
+        "vulnerable_user"
+      ]
+    },
+    {
+      "id": "ocisevi/rativ_abierto_2021.csv.gz",
+      "adapter": "rativ_v1",
+      "partition_year": 2021,
+      "observation_unit": "crash_record",
+      "source_url": "https://ocisevi.org.mx/ocisevi-nl/rativ_abierto_2021.csv.gz",
+      "license": "Pautas OCISEVI: citar fuente y mantener integridad. Licencia específica de redistribución sin confirmar.",
+      "redistribution_approved": false,
+      "local_preview_approved": true,
+      "privacy_reviewed": true,
+      "privacy_review_scope": "Sólo lista blanca canónica y agregados locales. Se excluyen teléfonos, placas, pólizas, folios públicos y narraciones. No permite despliegue público.",
+      "columns": {
+        "event_id": "ENCUESTA",
+        "municipality": "MUNICIPIO",
+        "day": "Día",
+        "month": "Mes",
+        "year": "Año",
+        "hour": "Hora de reporte",
+        "injured": "Total de lesionados",
+        "deaths": "Total de fallecidos",
+        "street": "Calle",
+        "crash_type": "Tipo de Hecho de Tránsito",
+        "vehicle": "VEHICULO CODIFICADO",
+        "reference": "Referencia"
+      },
+      "derived_fields": [
+        "date",
+        "latitude",
+        "longitude",
+        "vulnerable_user"
+      ]
+    },
+    {
+      "id": "ocisevi/rativ_abierto_2022.csv.gz",
+      "adapter": "rativ_v1",
+      "partition_year": 2022,
+      "observation_unit": "crash_record",
+      "source_url": "https://ocisevi.org.mx/ocisevi-nl/rativ_abierto_2022.csv.gz",
+      "license": "Pautas OCISEVI: citar fuente y mantener integridad. Licencia específica de redistribución sin confirmar.",
+      "redistribution_approved": false,
+      "local_preview_approved": true,
+      "privacy_reviewed": true,
+      "privacy_review_scope": "Sólo lista blanca canónica y agregados locales. Se excluyen teléfonos, placas, pólizas, folios públicos y narraciones. No permite despliegue público.",
+      "columns": {
+        "event_id": "ENCUESTA",
+        "municipality": "MUNICIPIO",
+        "day": "Día",
+        "month": "Mes",
+        "year": "Año",
+        "hour": "Hora de reporte",
+        "injured": "Total de lesionados",
+        "deaths": "Total de fallecidos",
+        "street": "Calle",
+        "crash_type": "Tipo de Hecho de Tránsito",
+        "vehicle": "VEHICULO CODIFICADO",
+        "reference": "Referencia"
+      },
+      "derived_fields": [
+        "date",
+        "latitude",
+        "longitude",
+        "vulnerable_user"
+      ]
+    },
+    {
+      "id": "ocisevi/rativ_abierto_2023.csv.gz",
+      "adapter": "rativ_v1",
+      "partition_year": 2023,
+      "observation_unit": "crash_record",
+      "source_url": "https://ocisevi.org.mx/ocisevi-nl/rativ_abierto_2023.csv.gz",
+      "license": "Pautas OCISEVI: citar fuente y mantener integridad. Licencia específica de redistribución sin confirmar.",
+      "redistribution_approved": false,
+      "local_preview_approved": true,
+      "privacy_reviewed": true,
+      "privacy_review_scope": "Sólo lista blanca canónica y agregados locales. Se excluyen teléfonos, placas, pólizas, folios públicos y narraciones. No permite despliegue público.",
+      "columns": {
+        "event_id": "ENCUESTA",
+        "municipality": "MUNICIPIO",
+        "day": "Día",
+        "month": "Mes",
+        "year": "Año",
+        "hour": "Hora de reporte",
+        "injured": "Total de lesionados",
+        "deaths": "Total de fallecidos",
+        "street": "Calle",
+        "crash_type": "Tipo de Hecho de Tránsito",
+        "vehicle": "VEHICULO CODIFICADO",
+        "reference": "Referencia"
+      },
+      "derived_fields": [
+        "date",
+        "latitude",
+        "longitude",
+        "vulnerable_user"
+      ]
+    },
+    {
+      "id": "ocisevi/rativ_abierto_2024.csv.gz",
+      "adapter": "rativ_v1",
+      "partition_year": 2024,
+      "observation_unit": "crash_record",
+      "source_url": "https://ocisevi.org.mx/ocisevi-nl/rativ_abierto_2024.csv.gz",
+      "license": "Pautas OCISEVI: citar fuente y mantener integridad. Licencia específica de redistribución sin confirmar.",
+      "redistribution_approved": false,
+      "local_preview_approved": true,
+      "privacy_reviewed": true,
+      "privacy_review_scope": "Sólo lista blanca canónica y agregados locales. Se excluyen teléfonos, placas, pólizas, folios públicos y narraciones. No permite despliegue público.",
+      "columns": {
+        "event_id": "ENCUESTA",
+        "municipality": "MUNICIPIO",
+        "day": "Día",
+        "month": "Mes",
+        "year": "Año",
+        "hour": "Hora de reporte",
+        "injured": "Total de lesionados",
+        "deaths": "Total de fallecidos",
+        "street": "Calle",
+        "crash_type": "Tipo de Hecho de Tránsito",
+        "vehicle": "VEHICULO CODIFICADO",
+        "reference": "Referencia"
+      },
+      "derived_fields": [
+        "date",
+        "latitude",
+        "longitude",
+        "vulnerable_user"
+      ]
+    },
+    {
+      "id": "ocisevi/rativ_abierto_2025.csv.gz",
+      "adapter": "rativ_v1",
+      "partition_year": 2025,
+      "observation_unit": "crash_record",
+      "source_url": "https://ocisevi.org.mx/ocisevi-nl/rativ_abierto_2025.csv.gz",
+      "license": "Pautas OCISEVI: citar fuente y mantener integridad. Licencia específica de redistribución sin confirmar.",
+      "redistribution_approved": false,
+      "local_preview_approved": true,
+      "privacy_reviewed": true,
+      "privacy_review_scope": "Sólo lista blanca canónica y agregados locales. Se excluyen teléfonos, placas, pólizas, folios públicos y narraciones. No permite despliegue público.",
+      "columns": {
+        "event_id": "ENCUESTA",
+        "municipality": "MUNICIPIO",
+        "day": "Día",
+        "month": "Mes",
+        "year": "Año",
+        "hour": "Hora de reporte",
+        "injured": "Total de lesionados",
+        "deaths": "Total de fallecidos",
+        "street": "Calle",
+        "crash_type": "Tipo de Hecho de Tránsito",
+        "vehicle": "VEHICULO CODIFICADO",
+        "reference": "Referencia"
+      },
+      "derived_fields": [
+        "date",
+        "latitude",
+        "longitude",
+        "vulnerable_user"
+      ]
+    },
+    {
+      "id": "ocisevi/rativ_abierto_2026.csv.gz",
+      "adapter": "rativ_v1",
+      "partition_year": 2026,
+      "observation_unit": "crash_record",
+      "source_url": "https://ocisevi.org.mx/ocisevi-nl/rativ_abierto_2026.csv.gz",
+      "license": "Pautas OCISEVI: citar fuente y mantener integridad. Licencia específica de redistribución sin confirmar.",
+      "redistribution_approved": false,
+      "local_preview_approved": true,
+      "privacy_reviewed": true,
+      "privacy_review_scope": "Sólo lista blanca canónica y agregados locales. Se excluyen teléfonos, placas, pólizas, folios públicos y narraciones. No permite despliegue público.",
+      "columns": {
+        "event_id": "ENCUESTA",
+        "municipality": "MUNICIPIO",
+        "day": "Día",
+        "month": "Mes",
+        "year": "Año",
+        "hour": "Hora de reporte",
+        "injured": "Total de lesionados",
+        "deaths": "Total de fallecidos",
+        "street": "Calle",
+        "crash_type": "Tipo de Hecho de Tránsito",
+        "vehicle": "VEHICULO CODIFICADO",
+        "reference": "Referencia"
+      },
+      "derived_fields": [
+        "date",
+        "latitude",
+        "longitude",
+        "vulnerable_user"
+      ]
+    }
+  ],
+  "privacy": {
+    "minimum_cell_size": 5
+  },
+  "hotspots": {
+    "h3_resolutions": [
+      7,
+      8,
+      9
+    ],
+    "dbscan_eps_meters": 150,
+    "dbscan_min_samples": 5,
+    "dbscan_max_points": 50000
+  },
+  "notes": "Añadir adaptadores sólo tras inspeccionar DATA_DICTIONARY.csv. No se infieren equivalencias de variables. Ver docs/INGESTION.md.",
+  "mode": "local_preview",
+  "experimental_spatial_enabled": true
+}
